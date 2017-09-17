@@ -46,7 +46,7 @@ n'importe quel site Internet en utilisant la balise `a`. Vous pouvez égualement
 utiliser des chemins relatifs dans vos lien pour faire référence à d'autres
 fichiers HTML.
 
-Par exemple si vous avez cette structure de fichiers:
+Par exemple si vous avez cette structure de fichiers et de dossiers:
 
 ```
 .
@@ -62,7 +62,7 @@ Par exemple si vous avez cette structure de fichiers:
 └── index.html
 ```
 
-Voici la représentation de cette structure dans `index.html` :
+Voici sa représentation dans `index.html` :
 
 ```html
 <ul>
@@ -108,8 +108,8 @@ ou relatifs via l'attribut `src` :
 <img src="https://github.com/pirhoo/v2.pirhoo.com/raw/master/src/assets/images/penguin.jpg" />
 ```
 
-En théorie, il faut systématiquement utilise l'attribut `alt` pour décrire l'image.
-Cette description est utilisés par les liseuses d'écran pour les mal-voyants. Ce
+En théorie, il faut systématiquement utiliser l'attribut `alt` pour décrire l'image.
+Cette description est utilisée par les liseuses d'écran pour les mal-voyants. Ce
 texte *alternatif* est aussi affiché à la place de l'image lorsque celle-ci ne
 se charge pas correctement (mauvais lien, image corrompue, etc).
 
@@ -183,4 +183,22 @@ plusieurs formats.
   <source src="videos/penguin.webm" type="video/webm">
   Votre navigateur ne permet pas de lire les vidéos HTML5.
 </video>
+```
+
+## Intégrer des iframes
+
+Comme vous pouvez l'observer, intégrer une vidéo à un site peut s'avérer complexe.
+Pour cette raison on utilise la plupart du temps un service externe qui se chargera
+de convertir votre vidéos dans de multiples formats et l'optimiser pour la rendre
+lisible sur un maximum d'utilisateurs.
+
+YouTube, Dailymotion Vimeo sont parmi les plus connus. Depuis une vidéo sur l'un
+de ces site, vous pouvez trouver un code d'iframe en quelques clicks:
+
+![Youtube video sharing](./images/youtube.png)
+
+Vous n'aurez ensuite qu'à copier coller le code `iframe` pour l'intégrer dans votre site:
+
+```html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tcx6YyXvvRI" frameborder="0" allowfullscreen></iframe>
 ```
