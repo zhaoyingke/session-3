@@ -39,7 +39,7 @@ Voici plusieurs exemple de lien absolu:
 * https://github.com/pirhoo/v2.pirhoo.com/raw/master/src/assets/images/penguin.jpg
 * https://i.imgur.com/WdtOUOb.jpg
 
-### Liens hypertexts
+### Liens hypertextes
 
 Comme nous l'avons vu auparavant, il est possible de faire un lien (absolu) vers
 n'importe quel site Internet en utilisant la balise `a`. Vous pouvez égualement
