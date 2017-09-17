@@ -1,4 +1,4 @@
-# session-3
+# Session 3
 
 Utilisation d'image, chemins relatifs et absolus, galleries photos.
 
@@ -139,7 +139,7 @@ homotétique, c'est à dire sans la déformer.
 Redimensionner l'image directement en HTML n'est pas un bonne pratique, surtout
 si votre image est très grande et longue à télécharger. Par conséquent il est recommandé
 d'utiliser une image redimensionnée au préalable avec Photoshop ou n'importe quel
-site d'édition d'image (comme [ResizeImage](http://resizeimage.net)).
+site d'édition d'images (comme [ResizeImage](http://resizeimage.net)).
 
 
 ```html
@@ -148,4 +148,39 @@ site d'édition d'image (comme [ResizeImage](http://resizeimage.net)).
 <a href="images/penguin.jpg" target="_blank">
   <img src="images/penguin-mini.jpg" alt="Un bébé manchot sur la banquise"  width="100" />
 </a>
+```
+
+### Les formats d'images
+
+Sur Internet, on utilise principalement 3 formats d'images:
+
+* `JPG` pour des images sans transparence plus ou moins compressées
+* `PNG` pour des images avec des zones transparentes mais moins bien compressés
+* `GIF` pour des images animées, avec des zones transparentes, très peu compressées et avec peu de couleurs.
+
+Libre à vous de choisir le meilleur format pour une image. Tout dépend de vos besoin en terme de poids, transparence et animation.
+
+## Intégrer des vidéos et du sons
+
+Il est très facile d'intégrer un player vidéo ou sonore à votre page grâce aux
+balises `video` et `audio` qui ont un fonctionnement très similaire:
+
+```html
+<video src="videos/penguin.mp4" poster="images/penguin.jpg" autoplay controls loop />
+```
+
+Le problème, c'est que pour les vidéos comme pour les sons, les formats suportés
+par les navigateurs sont très différents. [Voir la listes des formats](https://developer.mozilla.org/fr/docs/Web/HTML/Formats_pour_audio_video).
+
+Pour être certains que votre vidéos sera lisible, il faut donc la proposer en
+plusieurs formats.
+
+```html
+<video autoplay loop controls poster="images/penguin.jpg">
+  <source src="videos/penguin.mov" type="video/mov">
+  <source src="videos/penguin.mp4" type="video/mp4">
+  <source src="videos/penguin.ogv" type="video/ogv">
+  <source src="videos/penguin.webm" type="video/webm">
+  Votre navigateur ne permet pas de lire les vidéos HTML5.
+</video>
 ```
