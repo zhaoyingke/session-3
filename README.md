@@ -23,9 +23,9 @@ Par exemple:
 * si l'image est dans le dossier parent, son chemin est `../chat.jpg`
 * si l'image est dans un dossier adjacent (même parent), son chemin est `../images/chat.jpg`
 
-**:warning: Attention si vous déplacez votre fichier HTML, par exemple dans un sous-dossier,
+*:warning: Attention si vous déplacez votre fichier HTML, par exemple dans un sous-dossier,
 veillez à ce que les chemins relatifs présents dans votre fichier n'aient pas changé.
-Le cas échéant il faudra mettre à jour tous vos chemins relatifs.**
+Le cas échéant il faudra mettre à jour tous vos chemins relatifs*
 
 ### Chemin absolu
 
