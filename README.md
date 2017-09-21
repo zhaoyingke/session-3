@@ -1,6 +1,6 @@
 # Session 3
 
-Utilisation d'image, chemins relatifs et absolus, galleries photos.
+Utilisation d'image, chemins relatifs et absolus, galeries photos.
 
 ## Intégrer des contenus externes
 
@@ -202,3 +202,8 @@ Vous n'aurez ensuite qu'à copier coller le code `iframe` pour l'intégrer dans 
 ```html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Tcx6YyXvvRI" frameborder="0" allowfullscreen></iframe>
 ```
+
+## Faire une galerie
+
+En utilisant le modèle présent dans `gallery.html`, essayer d'intégrer une
+galerie photos personnalisée au fichier `chapitres/chapitre-1.html`.

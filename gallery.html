@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ma galerie photo</title>
+    <!-- Les fichiers CSS qui donnent un peu de style à notre page. Attention ce
+    fichier CSS est hebergé "ailleurs" est référencé avec un chemin absolu -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container my-4">
+      <h1>Ma galerie photo</h1>
+      <!-- Ce block avec pour id "app" sert à créer une galerie -->
+      <div id="app">
+        <carousel-3d>
+          <!-- Pour ajouter une photo à cette galerie il faut ajouter une
+          balise <slide> contenant une <img>. Chaque slide doit avoir
+          un index different. -->
+          <slide :index="0">
+            <img src="https://placekitten.com/g/390/300" />
+          </slide>
+          <slide :index="1">
+            <img src="https://placekitten.com/g/400/300" />
+          </slide>
+          <slide :index="2">
+            <img src="https://placekitten.com/g/410/300" />
+          </slide>
+        </carousel-3d>
+      </div>
+    </div>
+
+    <!-- Les fichiers javascript qui permettent au carousel de fonctionner. Ces
+    fichier JS sont référencés avec des chemins relatifs. Si vous devez les référencer
+    dans un fichier depuis un autre dossier, pensez à mettre à jour ces chemins. -->
+    <script src="vendors/vue.min.js"></script>
+    <script src="vendors/vue-carousel-3d.min.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>
